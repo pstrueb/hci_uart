@@ -8,7 +8,8 @@ tests:
     integration_platforms:
       - nrf54l15dk/nrf54l15/cpuapp
     extra_args:
-      - CONFIG=prj_auracaster.config
+      - CONFIG=prj.conf
+      - OVERLAY_CONFIG=debug_bt_rtt.conf,iso.conf
     tags:
       - uart
       - bluetooth
@@ -19,8 +20,8 @@ tests:
     integration_platforms:
       - nrf52840dongle/nrf52840
     extra_args:
-      - CONFIG=prj_auracaster.config
-      - OVERLAY_CONFIG=boards/nrf52840dongle_nrf52840.conf
+      - CONFIG=prj.conf
+      - OVERLAY_CONFIG=boards/nrf52840dongle_nrf52840.conf,iso.conf
     tags:
       - uart
       - bluetooth
